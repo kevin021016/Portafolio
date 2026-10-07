@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --linea: rgba(38, 37, 35, 0.12);
+    --gradiente-cian: linear-gradient(135deg, #02BCFF 0%, #58D3FF 100%);
+    background-color: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------- TOPBAR --------------------- */
+
+.topbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* el menú móvil ya no debe ser hijo "en flujo" del sticky */
+#mobileMenu.collapse.show,
+#mobileMenu.collapsing {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.topbar {
+    width: 100%;
+    min-height: 4rem;
+    background: #000000;
+    border-bottom: 1px solid var(--linea);
+    box-shadow: 0 2px 14px rgba(31, 46, 51, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6rem;
+    /* Margen amplio para desktop */
+}
+
+/* RESPONSIVO PARA CELULARES Y TABLETS */
+@media (max-width: 1057px) {
+    .topbar {
+        padding-inline: 1.25rem;
+        /* Reduce el margen en celular para aprovechar todo el ancho */
+    }
+}
+
+.topbar-options {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.topbar-btn {
+    background: var(--gradiente-cian);
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.topbar-btn:hover {
+    opacity: 0.85;
+}
+
+/* ------------------- TOPBAR ITEMS --------------------- */
+
+.topbar-item {
+    cursor: pointer;
+    font-family: sans-serif;
+    letter-spacing: 1.2px;
+    font-size: 0.78rem;
+    font-weight: 450;
+    position: relative;
+    padding-bottom: 3px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.topbar-item:hover {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.topbar-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gradiente-cian);
+    transition: width 0.3s ease-in-out;
+}
+
+.topbar-item:hover::after {
+    width: 100%;
+}
+
+.topbar-item.active::after {
+    width: 100%;
+}
+
+.topbar-item.active {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.topbar-menu-item {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbar-menu-item:hover:active {
+    background-color: #d1d1d1;
+    border-radius: 4px;
+}
+
+.topbar-logo img {
+    height: 2.5rem;
+    display: block;
+}
