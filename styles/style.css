@@ -3,12 +3,13 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    background-color: #191919;
+    color: #ffffff;
 }
 
 :root {
     --linea: rgba(38, 37, 35, 0.12);
     --gradiente-cian: linear-gradient(135deg, #02BCFF 0%, #58D3FF 100%);
-    background-color: #191919;
 }
 
 * {
@@ -25,7 +26,6 @@ body {
     z-index: 50;
 }
 
-/* el menú móvil ya no debe ser hijo "en flujo" del sticky */
 #mobileMenu.collapse.show,
 #mobileMenu.collapsing {
     position: absolute;
@@ -44,14 +44,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-inline: 6rem;
-    /* Margen amplio para desktop */
 }
 
-/* RESPONSIVO PARA CELULARES Y TABLETS */
 @media (max-width: 1057px) {
     .topbar {
         padding-inline: 1.25rem;
-        /* Reduce el margen en celular para aprovechar todo el ancho */
     }
 }
 
@@ -60,18 +57,6 @@ body {
     align-items: center;
     gap: 2.5rem;
 }
-
-.topbar-btn {
-    background: var(--gradiente-cian);
-    border-radius: 4px;
-    transition: opacity 0.3s ease;
-}
-
-.topbar-btn:hover {
-    opacity: 0.85;
-}
-
-/* ------------------- TOPBAR ITEMS --------------------- */
 
 .topbar-item {
     cursor: pointer;
@@ -103,10 +88,7 @@ body {
     transition: width 0.3s ease-in-out;
 }
 
-.topbar-item:hover::after {
-    width: 100%;
-}
-
+.topbar-item:hover::after,
 .topbar-item.active::after {
     width: 100%;
 }
@@ -118,6 +100,21 @@ body {
     font-weight: 600;
 }
 
+/* TÍTULO ACTIVO EN MÓVIL */
+.topbar-mobile-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.topbar-mobile-title.active {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .topbar-menu-item {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -125,10 +122,6 @@ body {
     color: inherit;
 }
 
-.topbar-menu-item:hover:active {
-    background-color: #d1d1d1;
-    border-radius: 4px;
-}
 .topbar-menu-item.active {
     background: var(--gradiente-cian);
     -webkit-background-clip: text;
@@ -140,3 +133,108 @@ body {
     height: 2.5rem;
     display: block;
 }
+
+/* ------------------- HERO / SOBRE MÍ --------------------- */
+
+.hero-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero-role {
+    font-size: 2rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 540px;
+    text-align: justify;
+}
+
+/* Botones principales */
+.hero-btn-primary {
+    background: var(--gradiente-cian);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+    opacity: 0.85;
+    color: #ffffff;
+}
+
+.hero-btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #02BCFF; /* Borde cian fijo como en tu diseño */
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+    background-color: rgba(2, 188, 255, 0.1);
+    color: #ffffff;
+    border-color: #58D3FF;
+}
+
+/* Tarjeta de Código (Estilo Terminal) */
+.hero-code-card {
+    background-color: #121212;
+    border: 1px solid rgba(2, 188, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.code-title {
+    color: #777;
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.code-body p {
+    margin-bottom: 0.4rem;
+    color: #d4d4d4;
+}
+
+.key { color: #9cdcfe; }
+.string { color: #ce9178; }
+.boolean { color: #569cd6; }

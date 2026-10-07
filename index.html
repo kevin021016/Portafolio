@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- TOPBAR -->
     <nav class="topbar-container">
         <div class="topbar">
             <!-- OPCIONES PARA COMPUTADORA -->
@@ -20,9 +21,14 @@
                 <a href="#" class="topbar-item">HABILIDADES</a>
                 <a href="#" class="topbar-item">PORTAFOLIO</a>
             </div>
-            <!-- SECCIÓN PARA MÓVIL / TABLET -->
+
+            <!-- TÍTULO DE LA SECCIÓN ACTIVA EN MÓVIL (Izquierda) -->
+            <div class="d-flex d-lg-none align-items-center">
+                <span class="topbar-mobile-title active">INICIO</span>
+            </div>
+
+            <!-- SECCIÓN PARA MÓVIL / TABLET (Derecha: Botón Hamburguesa) -->
             <div class="d-flex d-lg-none align-items-center gap-3">
-                <!-- Botón hamburguesa conectado al menú desplegable -->
                 <button class="btn text-black p-1 border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -47,10 +53,48 @@
         </div>
     </nav>
 
+    <!-- SECCIÓN HERO / SOBRE MÍ -->
+    <section class="hero-section container">
+        <div class="row align-items-center gy-5">
+            <!-- Columna de Texto -->
+            <div class="col-lg-7">
+                <div class="hero-title-box">
+                    <h1 class="hero-name">Kevin Parra,</h1>
+                    <h2 class="hero-role">Desarrollador de Software</h2>
+                </div>
+                <p class="hero-description text-secondary my-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris imperdiet viverra quam, a volutpat odio facilisis in. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#" class="btn hero-btn-primary">Mis proyectos</a>
+                    <a href="#" class="btn hero-btn-secondary">Descargar CV</a>
+                </div>
+            </div>
+
+            <!-- Columna de la Tarjeta de Código (Sustituto de la imagen) -->
+            <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end">
+                <div class="hero-code-card">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">perfil.json</span>
+                    </div>
+                    <div class="code-body">
+                        <p><span class="key">"nombre"</span>: <span class="string">"Kevin Alberto Avilés Parra"</span>,</p>
+                        <p><span class="key">"rol"</span>: <span class="string">"Desarrollador de Software"</span>,</p>
+                        <p><span class="key">"ubicacion"</span>: <span class="string">"Baja California Sur, MX"</span>,</p>
+                        <p><span class="key">"stack"</span>: [<span class="string">"C#"</span>, <span class="string">"PHP"</span>, <span class="string">"Laravel"</span>, <span class="string">"WPF"</span>],</p>
+                        <p><span class="key">"disponible"</span>: <span class="boolean">true</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>
