@@ -134,7 +134,7 @@ body {
     display: block;
 }
 
-/* ------------------- HERO / SOBRE MÍ --------------------- */
+/* ------------------- HERO / INICIO --------------------- */
 
 .hero-section {
     padding-top: 5rem;
@@ -238,3 +238,125 @@ body {
 .key { color: #9cdcfe; }
 .string { color: #ce9178; }
 .boolean { color: #569cd6; }
+
+/* ------------------- SOBRE MÍ --------------------- */
+
+.about-section {
+    width: 100%;
+    background-color: #191919;
+    padding-bottom: 5rem;
+}
+
+/* Línea divisora superior alineada a los márgenes del topbar */
+.about-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--linea);
+    margin: 0 6rem;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Contenido interior con los mismos márgenes laterales de la topbar */
+.about-content {
+    padding-inline: 6rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 1057px) {
+    .about-divider {
+        margin: 0 1.25rem;
+    }
+    .about-content {
+        padding-inline: 1.25rem;
+    }
+}
+
+.about-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 540px;
+    text-align: justify;
+}
+
+/* Botón de la sección */
+.about-btn-primary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #02BCFF;
+    border-radius: 50rem;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.about-btn-primary:hover {
+    background-color: rgba(2, 188, 255, 0.1);
+    color: #ffffff;
+    border-color: #58D3FF;
+}
+
+/* Tabla de datos de la derecha */
+.about-details-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-label {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 30%;
+}
+/* Línea divisora superior de la tabla */
+.about-table-divider {
+    border: 0;
+    height: 1px;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin: 0;
+}
+
+
+.about-value {
+    color: #ffffff;
+    font-size: 0.95rem;
+    width: 70%;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .about-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    .about-label, .about-value {
+        width: 100%;
+        text-align: left;
+    }
+}
