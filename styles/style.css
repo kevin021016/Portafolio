@@ -51,6 +51,12 @@ body {
         padding-inline: 1.25rem;
     }
 }
+@media (max-width: 1057px) {
+    .topbar {
+        padding-inline: 1.25rem;
+        /* Reduce el margen en celular para aprovechar todo el ancho */
+    }
+}
 
 .topbar-options {
     display: flex;
@@ -265,7 +271,7 @@ body {
 
 @media (max-width: 1057px) {
     .about-divider {
-        margin: 0 1.25rem;
+        margin: 1.25rem;
     }
     .about-content {
         padding-inline: 1.25rem;
@@ -359,4 +365,117 @@ body {
         width: 100%;
         text-align: left;
     }
+}
+
+/* ------------------- HABILIDADES --------------------- */
+
+.skills-section {
+    width: 100%;
+    background-color: #191919;
+    padding-bottom: 5rem;
+}
+
+/* Línea divisora superior alineada al topbar */
+.skills-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--linea);
+    margin: 0 6rem;
+    opacity: 1;
+}
+
+/* Contenido interior con los mismos márgenes laterales */
+.skills-content {
+    padding-inline: 6rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 1057px) {
+    .skills-divider {
+        margin:  1.25rem;
+    }
+    .skills-content {
+        padding-inline: 1.25rem;
+    }
+}
+
+.skills-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.skills-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skills-description {
+    font-size: 0.95rem;
+}
+
+.skills-category-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Badges de Tecnologías con texto blanco y gradientes personalizados */
+.skill-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #ffffff !important;
+    border: none;
+}
+
+/* Frontend */
+.skill-badge.html { background: linear-gradient(to right, #E34F26, #F2703F); }
+.skill-badge.css { background: linear-gradient(to right, #1572B6, #33A1FD); }
+.skill-badge.vue { background: linear-gradient(to right, #35495E, #41B883); }
+.skill-badge.js { background: linear-gradient(to right, #C9B21A, #F7DF1E); }
+.skill-badge.react { background: linear-gradient(to right, #007D9C, #61DAFB); }
+
+/* Backend */
+.skill-badge.php { background: linear-gradient(to right, #4F5B93, #7A86B8); }
+.skill-badge.csharp { background: linear-gradient(to right, #512BD4, #9B7BF5); }
+.skill-badge.laravel { background: linear-gradient(to right, #FF2D20, #FF6B61); }
+.skill-badge.dotnet { background: linear-gradient(to right, #512BD4, #00B4D8); }
+.skill-badge.mysql { background: linear-gradient(to right, #005E7A, #0096C7); }
+.skill-badge.wpf { background: linear-gradient(to right, #002B3D, #0078D4); }
+.skill-badge.api { background: linear-gradient(to right, #3730A3, #06B6D4); }
+
+/* Herramientas */
+.skill-badge.git { background: linear-gradient(to right, #DF4B32, #F06529); }
+.skill-badge.github { background: linear-gradient(to right, #24292E, #586069); }
+.skill-badge.figma { background: linear-gradient(to right, #833AB4, #F7797D); }
+.skill-badge.vscode { background: linear-gradient(to right, #0065A9, #007ACC); }
+
+/* Tarjetas inferiores de estadísticas */
+.skill-stat-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--linea);
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
 }
