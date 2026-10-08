@@ -231,7 +231,7 @@
         <div class="projects-content">
             <!-- Título de la sección -->
             <div class="mb-5">
-                <h2 class="projects-section-title">Mis proyectos</h2>
+                <h2 class="about-subtitle">Mis proyectos</h2>
                 <p class="projects-description text-secondary mt-2">
                     Haz click a un proyecto para ver su descripción, tecnologías y repositorio.
                 </p>
@@ -239,7 +239,55 @@
 
             <!-- Grid de Proyectos -->
             <div class="row g-4">
-                <!-- Proyecto 1: Funeraria Mascotas (Con Mockup de Navegador) -->
+                <h4 class="projects-section-title">Proyectos personales</h4>
+
+                <!-- Proyecto 1 (Vista Web + Móvil) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <!-- Contenedor del Mockup Combinado (Escritorio + Móvil) -->
+                        <div class="browser-mockup position-relative">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar">
+                                    <span class="browser-url">funerariaindex.html</span>
+                                </div>
+                            </div>
+                            <div class="browser-body position-relative pb-4">
+                                <!-- Imagen principal de la página web (escritorio) -->
+                                <img src="/assets/img/device-shot.png" alt="Página web funeraria escritorio"
+                                    class="project-img">
+
+                                <!-- Imagen del celular flotando superpuesta -->
+                                <div class="project-phone-overlay">
+                                    <img src="/assets/img/mockup1-pag-web-funeraria.PNG" alt="Vista móvil funeraria"
+                                        class="phone-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Sitio Web Funeraria</h3>
+                            <p class="project-text text-secondary">
+                                Portal web responsivo con información de servicios, catálogos, carrozas, instalaciones y
+                                pólizas.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge html">HTML</span>
+                                <span class="badge skill-badge css">CSS</span>
+                                <span class="badge skill-badge js">JavaScript</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="#" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Funeraria Mascotas (Con Mockup de Navegador) -->
                 <div class="col-lg-4 col-md-6">
                     <div class="project-card">
                         <div class="browser-mockup">
@@ -258,14 +306,20 @@
                         </div>
 
                         <div class="project-body">
-                            <h3 class="project-title">Funeraria Mascotas</h3>
+                            <h3 class="project-title">Sistema funerario de mascotas en .NET</h3>
                             <p class="project-text text-secondary">
-                                Panel de contratos y catálogo web para una funeraria de mascotas.
+                                Panel de control para usuarios, clientes, contratos e inventario para una funeraria de
+                                mascotas.
                             </p>
                             <div class="d-flex flex-wrap gap-2 mb-5">
                                 <span class="badge skill-badge laravel">Laravel</span>
-                                <span class="badge skill-badge mysql">MySQL</span>
                                 <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge php">PHP</span>
+                                <span class="badge skill-badge mysql">MySQL</span>
+                                <span class="badge skill-badge dotnet">.NET</span>
+
+                                <span class="badge skill-badge wpf">WPF</span>
+                                <span class="badge skill-badge csharp">C#</span>
                                 <span class="badge skill-badge railway">Railway</span>
                             </div>
                             <div class="d-flex justify-content-end mt-auto">
@@ -275,40 +329,86 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
+
+                <!-- Proyecto 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="project-card">
-                        <div class="project-img-container placeholder-container">
-                            <div class="project-img-placeholder"></div>
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar">
+                                    <span class="browser-url">ListaContratos</span>
+                                </div>
+                            </div>
+                            <div class="browser-body">
+                                <!-- Direcciona aquí tu imagen de la lista de contratos -->
+                                <img src="/assets/img/mockup-sistema-web.png"
+                                    alt="Funeraria Mascotas Lista de Contratos" class="project-img">
+                            </div>
                         </div>
+
                         <div class="project-body">
-                            <h3 class="project-title">Nombre del proyecto 2</h3>
+                            <h3 class="project-title">Sistema funerario de mascotas en Vue.js</h3>
                             <p class="project-text text-secondary">
-                                Una línea sobre qué problema resuelve este proyecto.
+                                Panel de usuarios, clientes, contratos e inventario para una funeraria de mascotas.
                             </p>
-                            <div class="d-flex flex-wrap gap-2 mt-auto">
-                                <span class="badge skill-badge react">React</span>
-                                <span class="badge skill-badge node">Node.js</span>
-                                <span class="badge skill-badge sql">SQL</span>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge laravel">Laravel</span>
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge php">PHP</span>
+                                <span class="badge skill-badge vue">Vue</span>
+
+                                <span class="badge skill-badge js">JavaScript</span> </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="#" class="btn project-btn">Ir a proyecto</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Proyecto 3 -->
-                <div class="col-lg-4 col-md-12">
+            </div>
+            <div class="row g-4 mt-4">
+                <h4 class="projects-section-title">Proyectos universitarios</h4>
+                <p class="projects-description text-secondary mt-2">
+                    Estos proyectos fueron realizados en equipo, donde el rol que desempeñé fue el de desarrollador
+                    front-end.
+                </p>
+                <!-- Proyecto 4: Huella verde -->
+                <div class="col-lg-4 col-md-6">
                     <div class="project-card">
-                        <div class="project-img-container placeholder-container">
-                            <div class="project-img-placeholder"></div>
+                        <!-- Contenedor del Mockup Combinado (Escritorio + Móvil) -->
+                        <div class="browser-mockup position-relative">
+
+                            <div class="browser-body position-relative pb-4">
+                                <!-- Imagen principal de la página web (escritorio) -->
+                                <img src="/assets/img/login-portrait.png" alt="Página web funeraria escritorio"
+                                    class="project-img project-img--portrait">
+
+                                <!-- Imagen del celular flotando superpuesta -->
+                                <div class="project-phone-overlay">
+                                    <img src="/assets/img/estadísticas-left.png" alt="Vista móvil funeraria"
+                                        class="phone-img">
+                                </div>
+                            </div>
                         </div>
+
                         <div class="project-body">
-                            <h3 class="project-title">Nombre del proyecto 3</h3>
+                            <h3 class="project-title">Aplicación Huella Verde</h3>
                             <p class="project-text text-secondary">
-                                Una línea sobre qué problema resuelve este proyecto.
+                                Aplicación realizada en React Native que permite conocer la huella de carbono de los
+                                usuarios por medio de un cuestionario, generar estadísticas y mostrar consejos para
+                                reducirla.
                             </p>
-                            <div class="d-flex flex-wrap gap-2 mt-auto">
-                                <span class="badge skill-badge python">Python</span>
-                                <span class="badge skill-badge git">Git</span>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge react">React</span>
+                                <span class="badge skill-badge js">JavaScript</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="#" class="btn project-btn">Ir a proyecto</a>
                             </div>
                         </div>
                     </div>

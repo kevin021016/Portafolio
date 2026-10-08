@@ -545,6 +545,7 @@ body {
     border-bottom: 1px solid var(--linea);
 }
 
+
 .browser-header {
     background-color: #161b22;
     padding: 0.6rem 0.8rem;
@@ -648,4 +649,29 @@ body {
 .skill-badge.railway { 
     background: linear-gradient(to right, #0b0d17, #131629); 
     border: 1px solid rgba(2, 188, 255, 0.3); 
+}
+
+.project-phone-overlay {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    width: 32%; /* Ajusta el tamaño del celular con respecto a la tarjeta */
+    z-index: 10;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+}
+
+.phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.project-img--portrait {
+    width: 100%;
+    aspect-ratio: 19 / 10; 
+    object-fit: contain;  
+    object-position: center bottom;
+    box-shadow: none;
+    border-radius: 0;
 }
