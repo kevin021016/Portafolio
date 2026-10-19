@@ -1,7 +1,3 @@
-/* ============================================================
-   Vista de detalle de proyecto
-   Se abre con: proyecto.html?p=sitio-web | sistema-net | sistema-vue
-   ============================================================ */
 
 const PROYECTOS = {
     'sitio-web': {
@@ -38,7 +34,6 @@ const PROYECTOS = {
         tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['MySQL', 'mysql'], ['.NET', 'dotnet'], ['WPF', 'wpf'], ['C#', 'csharp'], ['Railway', 'railway']],
         imagenes: [
             { src: '/assets/img/panel_funeraria.png', alt: 'Lista de contratos', pie: 'Lista de contratos' }
-            // Agrega más: { src: '/assets/img/usuarios.png', alt: '...', pie: '...' },
         ],
         descripcion: [
             'Aplicación de escritorio hecha con WPF y C# para administrar una funeraria de mascotas: usuarios, clientes, contratos, inventario y reportes.',
@@ -64,7 +59,7 @@ const PROYECTOS = {
         resumen: 'Panel de usuarios, clientes, contratos e inventario para una funeraria de mascotas.',
         tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['Vue', 'vue'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '/assets/img/panel-vue.png', alt: 'Lista de contratos en el panel web', pie: 'Lista de contratos' }
+            { src: '/assets/img/mockup-sistema-web.png', alt: 'Lista de contratos en el panel web', pie: 'Lista de contratos' }
         ],
         descripcion: [
             'Versión web del panel administrativo, hecha con Vue.js y conectada a la misma API REST en Laravel.',
@@ -73,16 +68,103 @@ const PROYECTOS = {
         caracteristicas: [
             'Panel web con tema oscuro',
             'Lista de contratos con búsqueda y acciones rápidas',
-            'Gestión de clientes, usuarios e inventario',
-            'Comparte la misma API que la app de escritorio'
+            'Gestión de clientes, contratos, usuarios e inventario',
         ],
         enlaces: [
             { texto: 'Repositorio del panel (Vue.js) ↗', url: '#', tipo: 'primary' },
             { texto: 'Repositorio de la API (Laravel) ↗', url: '#', tipo: 'outline' }
         ],
         detalles: { Rol: 'Desarrollo full stack', Año: '2026', Estado: 'Terminado', Tipo: 'Aplicación web' }
+    },
+
+    /* ------------------ Proyectos universitarios (trabajo en equipo, rol front-end) ------------------ */
+
+    'huella-verde': {
+        titulo: 'Aplicación Huella Verde',
+        tipo: 'Aplicación móvil · Proyecto universitario',
+        resumen: 'Aplicación en React Native que permite conocer la huella de carbono de los usuarios, generar estadísticas y mostrar consejos para reducirla.',
+        tech: [['API REST', 'api'], ['React', 'react'], ['JavaScript', 'js']],
+        imagenes: [
+            { src: '/assets/img/login-portrait.png', alt: 'Pantallas de inicio de sesión y estadísticas de Huella Verde', pie: 'Inicio de sesión' },
+            { src: '/assets/img/inicio-portrait.png', alt: 'Pantallas de inicio o home screen', pie: 'Pantalla de inicio' },
+            { src: '/assets/img/cuestionario-left.png', alt: 'Pantalla de cuestionario', pie: 'Pantalla de cuestionario' },
+            { src: '/assets/img/estadísticas-left.png', alt: 'Pantalla de estadísticas del usuario', pie: 'Estadísticas de usuario' }
+        ],
+        descripcion: [
+            'Huella Verde calcula la huella de carbono que genera cada usuario a partir de un cuestionario sobre sus hábitos cotidianos, como alimentación, consumo en casa y transporte.',
+            'Los resultados se muestran con gráficas y datos, incluyendo una comparación con el promedio de México, y la app sugiere consejos para reducirla.',
+            'Fue un proyecto universitario en equipo, donde mi rol fue el de desarrollador front-end.'
+        ],
+        caracteristicas: [
+            'Registro e inicio de sesión de usuarios',
+            'Cuestionario sobre hábitos cotidianos',
+            'Gráficas y estadísticas de la huella de carbono',
+            'Comparación con el promedio de México',
+            'Consejos para reducir la huella',
+            'Consumo de una API REST'
+        ],
+        enlaces: [
+            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+        ],
+        detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación móvil' }
+    },
+
+    'pixoly': {
+        titulo: 'Aplicación Pixoly (Red social)',
+        tipo: 'Aplicación móvil · Proyecto universitario',
+        resumen: 'Red social inspirada en Instagram para crear un perfil, compartir publicaciones e interactuar con otros usuarios.',
+        tech: [['API REST', 'api'], ['React', 'react'], ['JavaScript', 'js']],
+        imagenes: [
+            { src: '/assets/img/login2-portrait.png', alt: 'Pantallas de inicio de sesión', pie: 'Inicio de sesión' },
+            { src: '/assets/img/post-left.png', alt: 'Pantalla de feed de publicaciones', pie: 'Feed de publicaciones' },
+            { src: '/assets/img/perfil-portrait.png', alt: 'Pantallas opciones de usuario', pie: 'Perfil de usuario' }
+
+        ],
+        descripcion: [
+            'Pixoly es una aplicación de red social similar a Instagram. Permite crear una cuenta, publicar contenido, comentar, dar like y guardar las publicaciones que más te gustan.',
+            'Fue un proyecto universitario en equipo, donde mi rol fue el de desarrollador front-end.'
+        ],
+        caracteristicas: [
+            'Registro e inicio de sesión',
+            'Perfil de usuario y ajustes de la cuenta',
+            'Publicaciones con imagen',
+            'Likes y caja de comentarios en cada publicación',
+            'Publicaciones guardadas',
+            'Consumo de una API REST'
+        ],
+        enlaces: [
+            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+        ],
+        detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación móvil' }
+    },
+
+    'reservas-mesas': {
+        titulo: 'Sistema de reservación de mesas',
+        tipo: 'Aplicación web · Proyecto universitario',
+        resumen: 'Sistema para restaurantes donde un administrador gestiona clientes, mesas y reservaciones.',
+        tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['HTML', 'html'], ['CSS', 'css'], ['JavaScript', 'js']],
+        imagenes: [
+            { src: '/assets/img/restaurante-mockup.png', alt: 'Panel de clientes del sistema de reservaciones', pie: 'Panel de clientes' }
+            // Agrega más pantallas: { src: '/assets/img/reservas-mesas-2.png', alt: '...', pie: '...' },
+        ],
+        descripcion: [
+            'Sistema hecho con Laravel para un restaurante. Un usuario administrador puede registrar clientes, mesas y reservaciones desde un panel de control.',
+            'Fue un proyecto universitario en equipo, donde mi rol fue el de desarrollador front-end.'
+        ],
+        caracteristicas: [
+            'Acceso para un usuario administrador',
+            'Registro, edición y eliminación de clientes',
+            'Gestión de mesas del restaurante',
+            'Registro y control de reservaciones',
+            'Panel con navegación lateral'
+        ],
+        enlaces: [
+            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+        ],
+        detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación web' }
     }
 };
+
 
 /* ------------------------------------------------------------ */
 
@@ -133,7 +215,7 @@ const PROYECTOS = {
     const siguiente = PROYECTOS[claves[(i + 1) % claves.length]];
     if (claves.length > 1) {
         [['prev', anterior, '← Proyecto anterior', claves[(i - 1 + claves.length) % claves.length]],
-         ['next', siguiente, 'Siguiente proyecto →', claves[(i + 1) % claves.length]]].forEach(([cls, proy, etiqueta, clave]) => {
+        ['next', siguiente, 'Siguiente proyecto →', claves[(i + 1) % claves.length]]].forEach(([cls, proy, etiqueta, clave]) => {
             const a = el('a', cls);
             a.href = 'proyecto.html?p=' + clave;
             a.appendChild(el('small', '', etiqueta));
