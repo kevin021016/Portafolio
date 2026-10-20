@@ -18,6 +18,11 @@ body {
     box-sizing: border-box;
 }
 
+#seccion_proyectos {
+    scroll-margin-top: 4rem;
+}
+
+
 /* ------------------- TOPBAR --------------------- */
 
 .topbar-container {
