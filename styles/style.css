@@ -6,7 +6,7 @@ body {
     background-color: #191919;
     color: #ffffff;
 }
-
+html { scroll-behavior: smooth; }
 :root {
     --linea: rgba(38, 37, 35, 0.12);
     --gradiente-cian: linear-gradient(135deg, #02BCFF 0%, #58D3FF 100%);
@@ -18,6 +18,15 @@ body {
     box-sizing: border-box;
 }
 
+#seccion_inicio {
+    scroll-margin-top: 4rem;
+}
+#seccion_sobre_mi {
+    scroll-margin-top: 4rem;
+}
+#seccion_habilidades {
+    scroll-margin-top: 4rem;
+}
 #seccion_proyectos {
     scroll-margin-top: 4rem;
 }
