@@ -21,8 +21,8 @@ const PROYECTOS = {
             'Botón flotante de WhatsApp y enlaces a redes sociales'
         ],
         enlaces: [
-            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' },
-            { texto: 'Ver sitio en vivo ↗', url: '#', tipo: 'outline' }
+            { texto: 'Ver repositorio ↗', url: 'https://github.com/kevin021016/paginaWeb-funeraria.git', tipo: 'primary' },
+            { texto: 'Ver sitio en vivo ↗', url: 'https://kevin021016.github.io/paginaWeb-funeraria/', tipo: 'outline' }
         ],
         detalles: { Rol: 'Diseño y desarrollo', Año: '2026', Estado: 'Terminado', Tipo: 'Sitio web' }
     },
@@ -47,10 +47,10 @@ const PROYECTOS = {
             'API desplegada en la nube con base de datos MySQL'
         ],
         enlaces: [
-            { texto: 'Repositorio de la app (WPF) ↗', url: '#', tipo: 'primary' },
-            { texto: 'Repositorio de la API (Laravel) ↗', url: '#', tipo: 'outline' }
+            { texto: 'Repositorio de la app (WPF) ↗', url: 'https://github.com/kevin021016/Sistema-funerario-mascotas.git', tipo: 'primary' },
+            { texto: 'Repositorio de la API (Laravel) ↗', url: 'https://github.com/kevin021016/Sistema-Funerario-Mascotas-API.git', tipo: 'outline' }
         ],
-        detalles: { Rol: 'Desarrollo full stack', Año: '2026', Estado: 'Terminado', Tipo: 'Aplicación de escritorio' }
+        detalles: { Rol: 'Desarrollo full stack', Año: '2026', Estado: 'En curso', Tipo: 'Aplicación de escritorio' }
     },
 
     'sistema-vue': {
@@ -71,10 +71,10 @@ const PROYECTOS = {
             'Gestión de clientes, contratos, usuarios e inventario',
         ],
         enlaces: [
-            { texto: 'Repositorio del panel (Vue.js) ↗', url: '#', tipo: 'primary' },
-            { texto: 'Repositorio de la API (Laravel) ↗', url: '#', tipo: 'outline' }
+            { texto: 'Repositorio del panel (Vue.js) ↗', url: 'https://github.com/kevin021016/sistema-funerario-web.git', tipo: 'primary' },
+            { texto: 'Repositorio de la API (Laravel) ↗', url: 'https://github.com/kevin021016/API-sistema-funerario-web.git', tipo: 'outline' }
         ],
-        detalles: { Rol: 'Desarrollo full stack', Año: '2026', Estado: 'Terminado', Tipo: 'Aplicación web' }
+        detalles: { Rol: 'Desarrollo full stack', Año: '2026', Estado: 'Suspendido', Tipo: 'Aplicación web' }
     },
 
     /* ------------------ Proyectos universitarios (trabajo en equipo, rol front-end) ------------------ */
@@ -104,7 +104,7 @@ const PROYECTOS = {
             'Consumo de una API REST'
         ],
         enlaces: [
-            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+            { texto: 'Ver repositorio ↗', url: 'https://github.com/kevin021016/Sistema-Huella-de-Carbono.git', tipo: 'primary' }
         ],
         detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación móvil' }
     },
@@ -133,7 +133,7 @@ const PROYECTOS = {
             'Consumo de una API REST'
         ],
         enlaces: [
-            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+            { texto: 'Ver repositorio ↗', url: 'https://github.com/kevin021016/ProyectoRedSocial.git', tipo: 'primary' }
         ],
         detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación móvil' }
     },
@@ -159,7 +159,7 @@ const PROYECTOS = {
             'Panel con navegación lateral'
         ],
         enlaces: [
-            { texto: 'Ver repositorio ↗', url: '#', tipo: 'primary' }
+            { texto: 'Ver repositorio ↗', url: 'https://github.com/kevin021016/ProyectoFinalReservas.git', tipo: 'primary' }
         ],
         detalles: { Rol: 'Desarrollador front-end', Modalidad: 'Proyecto universitario en equipo', Tipo: 'Aplicación web' }
     }
