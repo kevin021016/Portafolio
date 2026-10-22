@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #191919;
+    color: #ffffff;
+}
+html { scroll-behavior: smooth; }
+:root {
+    --linea: rgba(38, 37, 35, 0.12);
+    --gradiente-cian: linear-gradient(135deg, #02BCFF 0%, #58D3FF 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#seccion_inicio {
+    scroll-margin-top: 4rem;
+}
+#seccion_sobre_mi {
+    scroll-margin-top: 4rem;
+}
+#seccion_habilidades {
+    scroll-margin-top: 4rem;
+}
+#seccion_proyectos {
+    scroll-margin-top: 4rem;
+}
+
+
+/* ------------------- TOPBAR --------------------- */
+
+.topbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+#mobileMenu.collapse.show,
+#mobileMenu.collapsing {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.topbar {
+    width: 100%;
+    min-height: 4rem;
+    background: #000000;
+    border-bottom: 1px solid var(--linea);
+    box-shadow: 0 2px 14px rgba(31, 46, 51, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6rem;
+}
+
+@media (max-width: 1057px) {
+    .topbar {
+        padding-inline: 1.25rem;
+    }
+}
+@media (max-width: 1057px) {
+    .topbar {
+        padding-inline: 1.25rem;
+        /* Reduce el margen en celular para aprovechar todo el ancho */
+    }
+}
+
+.topbar-options {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.topbar-item {
+    cursor: pointer;
+    font-family: sans-serif;
+    letter-spacing: 1.2px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 3px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.topbar-item:hover {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.topbar-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gradiente-cian);
+    transition: width 0.3s ease-in-out;
+}
+
+.topbar-item:hover::after,
+.topbar-item.active::after {
+    width: 100%;
+}
+
+.topbar-item.active {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* TÍTULO ACTIVO EN MÓVIL */
+.topbar-mobile-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.topbar-mobile-title.active {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.topbar-menu-item {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbar-menu-item.active {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.topbar-logo img {
+    height: 2.5rem;
+    display: block;
+}
+
+/* ------------------- HERO / INICIO --------------------- */
+
+.hero-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero-role {
+    font-size: 2rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 540px;
+    text-align: justify;
+}
+
+/* Botones principales */
+.hero-btn-primary {
+    background: var(--gradiente-cian);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+    opacity: 0.85;
+    color: #ffffff;
+}
+
+.hero-btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #02BCFF; /* Borde cian fijo como en tu diseño */
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+    background-color: rgba(2, 188, 255, 0.1);
+    color: #ffffff;
+    border-color: #58D3FF;
+}
+
+/* Tarjeta de Código (Estilo Terminal) */
+.hero-code-card {
+    background-color: #121212;
+    border: 1px solid rgba(2, 188, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.code-title {
+    color: #777;
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.code-body p {
+    margin-bottom: 0.4rem;
+    color: #d4d4d4;
+}
+
+.key { color: #9cdcfe; }
+.string { color: #ce9178; }
+.boolean { color: #569cd6; }
+
+/* ------------------- SOBRE MÍ --------------------- */
+
+.about-section {
+    width: 100%;
+    background-color: #191919;
+    padding-bottom: 5rem;
+}
+
+/* Línea divisora superior alineada a los márgenes del topbar */
+.about-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--linea);
+    margin: 0 6rem;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Contenido interior con los mismos márgenes laterales de la topbar */
+.about-content {
+    padding-inline: 6rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 1057px) {
+    .about-divider {
+        margin: 1.25rem;
+    }
+    .about-content {
+        padding-inline: 1.25rem;
+    }
+}
+
+.about-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 540px;
+    text-align: justify;
+}
+
+/* Botón de la sección */
+.about-btn-primary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #02BCFF;
+    border-radius: 50rem;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.about-btn-primary:hover {
+    background-color: rgba(2, 188, 255, 0.1);
+    color: #ffffff;
+    border-color: #58D3FF;
+}
+
+/* Tabla de datos de la derecha */
+.about-details-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-label {
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 30%;
+}
+/* Línea divisora superior de la tabla */
+.about-table-divider {
+    border: 0;
+    height: 1px;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin: 0;
+}
+
+
+.about-value {
+    color: #ffffff;
+    font-size: 0.95rem;
+    width: 70%;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .about-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    .about-label, .about-value {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* ------------------- HABILIDADES --------------------- */
+
+.skills-section {
+    width: 100%;
+    background-color: #191919;
+    padding-bottom: 5rem;
+}
+
+/* Línea divisora superior alineada al topbar */
+.skills-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--linea);
+    margin: 0 6rem;
+    opacity: 1;
+}
+
+/* Contenido interior con los mismos márgenes laterales */
+.skills-content {
+    padding-inline: 6rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 1057px) {
+    .skills-divider {
+        margin:  1.25rem;
+    }
+    .skills-content {
+        padding-inline: 1.25rem;
+    }
+}
+
+.skills-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.skills-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skills-description {
+    font-size: 0.95rem;
+}
+
+.skills-category-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Badges de Tecnologías con texto blanco y gradientes personalizados */
+.skill-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #ffffff !important;
+    border: none;
+}
+
+/* Frontend */
+.skill-badge.html { background: linear-gradient(to right, #E34F26, #F2703F); }
+.skill-badge.css { background: linear-gradient(to right, #1572B6, #33A1FD); }
+.skill-badge.vue { background: linear-gradient(to right, #35495E, #41B883); }
+.skill-badge.js { background: linear-gradient(to right, #C9B21A, #F7DF1E); }
+.skill-badge.react { background: linear-gradient(to right, #007D9C, #61DAFB); }
+
+/* Backend */
+.skill-badge.php { background: linear-gradient(to right, #4F5B93, #7A86B8); }
+.skill-badge.csharp { background: linear-gradient(to right, #512BD4, #9B7BF5); }
+.skill-badge.laravel { background: linear-gradient(to right, #FF2D20, #FF6B61); }
+.skill-badge.dotnet { background: linear-gradient(to right, #512BD4, #00B4D8); }
+.skill-badge.mysql { background: linear-gradient(to right, #005E7A, #0096C7); }
+.skill-badge.wpf { background: linear-gradient(to right, #002B3D, #0078D4); }
+.skill-badge.api { background: linear-gradient(to right, #3730A3, #06B6D4); }
+
+/* Herramientas */
+.skill-badge.git { background: linear-gradient(to right, #DF4B32, #F06529); }
+.skill-badge.github { background: linear-gradient(to right, #24292E, #586069); }
+.skill-badge.figma { background: linear-gradient(to right, #833AB4, #F7797D); }
+.skill-badge.vscode { background: linear-gradient(to right, #0065A9, #007ACC); }
+
+/* Tarjetas inferiores de estadísticas */
+.skill-stat-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--linea);
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradiente-cian);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+}
+
+/* ------------------- MIS PROYECTOS --------------------- */
+
+.projects-section {
+    width: 100%;
+    background-color: #191919;
+    padding-bottom: 5rem;
+}
+
+/* Línea divisora superior alineada al topbar */
+.projects-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin-inline: 6rem;
+    opacity: 1;
+}
+
+/* Contenido interior con los mismos márgenes laterales */
+.projects-content {
+    padding-inline: 6rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 1120px) {
+    .projects-divider {
+        margin-inline: 1.25rem;
+    }
+    .projects-content {
+        padding-inline: 1.25rem;
+    }
+}
+
+.projects-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+/* Estilo de la tarjeta de proyecto */
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid var(--linea);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(2, 188, 255, 0.4);
+    transform: translateY(-4px);
+}
+
+/* --- MOCKUP DE NAVEGADOR OSCURO --- */
+.browser-mockup {
+    background-color: #0d151c; /* Fondo negro azulado solicitado */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--linea);
+}
+
+
+.browser-header {
+    background-color: #161b22;
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.browser-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.browser-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.browser-dots .dot.red { background-color: #ff5f56; }
+.browser-dots .dot.yellow { background-color: #ffbd2e; }
+.browser-dots .dot.green { background-color: #27c93f; }
+
+.browser-address-bar {
+    background-color: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 0.2rem 0.8rem;
+    flex-grow: 1;
+    max-width: 240px;
+}
+
+.browser-url {
+    font-size: 0.7rem;
+    color: #8b949e;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.browser-body {
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+/* Placeholder para cartas secundarias */
+.project-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #d1d5db;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.project-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.project-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-btn {
+    background: var(--gradiente-cian);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 50rem;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+.project-btn:hover {
+    opacity: 0.85;
+    color: #ffffff;
+}
+
+.skill-badge.railway { 
+    background: linear-gradient(to right, #0b0d17, #131629); 
+    border: 1px solid rgba(2, 188, 255, 0.3); 
+}
+
+.project-phone-overlay {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    width: 32%; /* Ajusta el tamaño del celular con respecto a la tarjeta */
+    z-index: 10;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+}
+
+.phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.project-img--portrait {
+    width: 100%;
+    aspect-ratio: 19 / 10; 
+    object-fit: contain;  
+    object-position: center bottom;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Contenedor flexible para alinear las tres pantallas de la app */
+.app-mockup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* PROYECTO 5 */
+
+/* Pantalla izquierda */
+.app-img-left {
+    width: 28%;
+    height: auto;
+    object-fit: contain;
+    transform: scale(0.9);
+    opacity: 0.85;
+    z-index: 1;
+}
+
+/* Pantalla central (ahora detrás de la derecha) */
+.app-img-main {
+    width: 42%;
+    height: auto;
+        aspect-ratio: 10 / 10; 
+
+    object-fit: contain;
+    z-index: 1; /* Bajamos la prioridad para que pase al fondo */
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+}
+
+.app-img-right-overlay {
+    position: absolute !important;
+    right: 5px;
+    bottom: 10px;
+    width: 32% !important;
+    z-index: 4; /* Subimos la prioridad para que quede por encima de la central */
+    transform: scale(0.95);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
+}

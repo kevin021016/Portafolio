@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Parra Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <!-- TOPBAR -->
+    <nav class="topbar-container">
+        <div class="topbar">
+            <!-- OPCIONES PARA COMPUTADORA -->
+            <div class="topbar-options d-none d-lg-flex align-items-center gap-5">
+                <a href="#seccion_inicio" class="topbar-item active">INICIO</a>
+                <a href="#seccion_sobre_mi" class="topbar-item">SOBRE MÍ</a>
+                <a href="#seccion_habilidades" class="topbar-item">HABILIDADES</a>
+                <a href="#seccion_proyectos" class="topbar-item">PORTAFOLIO</a>
+            </div>
+
+            <!-- TÍTULO DE LA SECCIÓN ACTIVA EN MÓVIL (Izquierda) -->
+            <div class="d-flex d-lg-none align-items-center">
+                <span class="topbar-mobile-title active">INICIO</span>
+            </div>
+
+            <!-- SECCIÓN PARA MÓVIL / TABLET (Derecha: Botón Hamburguesa) -->
+            <div class="d-flex d-lg-none align-items-center gap-3">
+                <button class="btn text-black p-1 border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-list"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MENÚ DESPLEGABLE PARA MÓVIL -->
+        <div class="collapse d-lg-none" id="mobileMenu"
+            style="background-color: #000000; border-bottom: 2px solid #000000 !important;">
+            <div class="d-flex flex-column gap-3 py-3" style="padding-left: 1.25rem;">
+                <a href="#seccion_inicio" class="topbar-menu-item active text-white py-1">Inicio</a>
+                <a href="#seccion_sobre_mi" class="topbar-menu-item text-white py-1">Sobre Mí</a>
+                <a href="#seccion_habilidades" class="topbar-menu-item text-white py-1">Habilidades</a>
+                <a href="#seccion_proyectos" class="topbar-menu-item text-white py-1">Portafolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO / INICIO -->
+    <section class="hero-section container" id="seccion_inicio">
+        <div class="row align-items-center gy-5">
+            <!-- Columna de Texto -->
+            <div class="col-lg-7">
+                <div class="hero-title-box">
+                    <h1 class="hero-name">Kevin Parra,</h1>
+                    <h2 class="hero-role">Desarrollador de Software</h2>
+                </div>
+                <p class="hero-description text-secondary my-4">
+                    Ingeniero en Desarrollo de Software especializado en desarrollo frontend y diseño de
+                    interfaces (UI). Me oriento a resolver problemas y a crear sistemas de gestión (CRUD)
+                    con interfaces web limpias y funcionales, que mejoran la experiencia del usuario final.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#seccion_proyectos" class="btn hero-btn-primary">Mis proyectos</a>
+                    <a href="./assets/KevinParra_curriculum.pdf" target="_blank" class="btn hero-btn-secondary">Descargar CV</a>
+                </div>
+            </div>
+
+            <!-- Columna de la Tarjeta de Código (Sustituto de la imagen) -->
+            <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end">
+                <div class="hero-code-card">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">perfil.json</span>
+                    </div>
+                    <div class="code-body">
+                        <p><span class="key">"nombre"</span>: <span class="string">"Kevin Alberto Avilés Parra"</span>,
+                        </p>
+                        <p><span class="key">"rol"</span>: <span class="string">"Desarrollador de Software"</span>,</p>
+                        <p><span class="key">"ubicacion"</span>: <span class="string">"Baja California Sur, MX"</span>,
+                        </p>
+                        <p><span class="key">"stack"</span>: [<span class="string">"C#"</span>, <span
+                                class="string">"PHP"</span>, <span class="string">"Laravel"</span>, <span
+                                class="string">"WPF"</span>],</p>
+                        <p><span class="key">"disponible"</span>: <span class="boolean">true</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="about-section" id="seccion_sobre_mi">
+        <!-- Línea divisora superior -->
+        <hr class="about-divider">
+
+        <div class="about-content">
+            <div class="row gy-5">
+                <!-- Columna Izquierda: Títulos, descripción y botón -->
+                <div class="col-lg-7">
+                    <h2 class="about-section-title">Sobre mí</h2>
+                    <h3 class="about-subtitle">Enfoque profesional</h3>
+                    <p class="about-description text-secondary my-4">
+                        Soy ingeniero en Desarrollo de Software (egresado, en proceso de titulación),
+                        especializado en desarrollo frontend y diseño de interfaces (UI). Tengo experiencia
+                        práctica en la gestión, estructuración y migración de bases de datos, así como en el
+                        diseño de prototipos y el desarrollo de interfaces web limpias y funcionales.
+                    </p>
+                    <p class="about-description text-secondary">
+                        Trabajé como gestor de datos, migrando registros históricos y activos (cartera de
+                        clientes, contratos y control de pagos) a un sistema de gestión y manteniendo la
+                        integridad de la información diaria. En la universidad participé en equipo en un sistema
+                        de gestión para restaurante (usuarios, clientes, pedidos y reservaciones) y en las
+                        aplicaciones Pixoly (red social) y Huella Verde, donde mi rol fue el de desarrollador
+                        front-end.
+                    </p>
+                    <div>
+                        <a href="https://wa.me/5216122005505" target="_blank" class="btn about-btn-primary">Contáctame</a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tabla de detalles -->
+                <div class="col-lg-5 d-flex align-items-center">
+                    <div class="about-details-table w-100">
+                        <hr class="about-table-divider">
+
+                        <div class="about-row">
+                            <span class="about-label">Ubicación</span>
+                            <span class="about-value">La Paz, Baja California Sur</span>
+                        </div>
+
+                        <div class="about-row">
+                            <span class="about-label">Idiomas</span>
+                            <span class="about-value">Español (nativo) · Inglés (B1)</span>
+                        </div>
+
+                        <div class="about-row">
+                            <span class="about-label">Enfoque</span>
+                            <span class="about-value">Desarrollo frontend y diseño de interfaces (UI)</span>
+                        </div>
+
+                        <div class="about-row">
+                            <span class="about-label">Estudios</span>
+                            <span class="about-value">Ingeniería en Desarrollo de Software (egresado, en proceso de titulación)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section class="skills-section" id="seccion_habilidades">
+        <!-- Línea divisora superior -->
+        <hr class="about-divider">
+        <hr class="skills-divider">
+        <div class="skills-content">
+            <!-- Título Principal -->
+            <div class="mb-5">
+                <h2 class="skills-section-title">Habilidades</h2>
+                <h3 class="skills-subtitle">Tecnologías que utilizo</h3>
+                <p class="skills-description text-secondary mt-2">
+                    Estas son las tecnologías que he utilizado en los proyectos en los que he participado
+                </p>
+            </div>
+
+            <!-- Categorías de Tecnologías -->
+            <div class="row g-4 mb-5">
+                <!-- Frontend -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="skills-category-title">Frontend</h4>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge skill-badge html">HTML</span>
+                        <span class="badge skill-badge css">CSS</span>
+                        <span class="badge skill-badge vue">Vue</span>
+                        <span class="badge skill-badge js">JavaScript</span>
+                        <span class="badge skill-badge react">React</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="skills-category-title">Backend</h4>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge skill-badge php">PHP</span>
+                        <span class="badge skill-badge csharp">C#</span>
+                        <span class="badge skill-badge laravel">Laravel</span>
+                        <span class="badge skill-badge dotnet">.NET</span>
+                        <span class="badge skill-badge mysql">MySQL</span>
+                        <span class="badge skill-badge wpf">WPF</span>
+                        <span class="badge skill-badge api">API Restful</span>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="skills-category-title">Herramientas</h4>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge skill-badge git">Git</span>
+                        <span class="badge skill-badge github">GitHub</span>
+                        <span class="badge skill-badge figma">Figma</span>
+                        <span class="badge skill-badge vscode">VS Code</span>
+                        <span class="badge skill-badge railway">Railway</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas de Estadísticas / Destacados -->
+            <div class="row g-4 pt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-stat-card">
+                        <h3 class="stat-number">1 año</h3>
+                        <p class="stat-label text-secondary mb-0">De experiencia laboral</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="skill-stat-card">
+                        <h3 class="stat-number">Disponible</h3>
+                        <p class="stat-label text-secondary mb-0">Para trabajo y colaboraciones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN MIS PROYECTOS -->
+    <section class="projects-section" id="seccion_proyectos">
+        <hr class="projects-divider">
+
+        <div class="projects-content">
+            <!-- Título de la sección -->
+            <div class="mb-5">
+                <h2 class="about-subtitle">Mis proyectos</h2>
+                <p class="projects-description text-secondary mt-2">
+                    Haz click a un proyecto para ver su descripción, tecnologías y repositorio.
+                </p>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div class="row g-4">
+                <h4 class="projects-section-title">Proyectos personales</h4>
+
+                <!-- Proyecto 1 (Vista Web + Móvil) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <!-- Contenedor del Mockup Combinado (Escritorio + Móvil) -->
+                        <div class="browser-mockup position-relative">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar">
+                                    <span class="browser-url">funerariaindex.html</span>
+                                </div>
+                            </div>
+                            <div class="browser-body position-relative pb-4">
+                                <!-- Imagen principal de la página web (escritorio) -->
+                                <img src="/assets/img/device-shot.png" alt="Página web funeraria escritorio"
+                                    class="project-img">
+
+                                <!-- Imagen del celular flotando superpuesta -->
+                                <div class="project-phone-overlay">
+                                    <img src="/assets/img/mockup1-pag-web-funeraria.PNG" alt="Vista móvil funeraria"
+                                        class="phone-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Sitio Web Funeraria</h3>
+                            <p class="project-text text-secondary">
+                                Portal web responsivo con información de servicios, catálogos, carrozas, instalaciones y
+                                pólizas.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge html">HTML</span>
+                                <span class="badge skill-badge css">CSS</span>
+                                <span class="badge skill-badge js">JavaScript</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=sitio-web" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Funeraria Mascotas (Con Mockup de Navegador) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                            </div>
+                            <div class="browser-body">
+                                <!-- Direcciona aquí tu imagen de la lista de contratos -->
+                                <img src="/assets/img/panel_funeraria.png" alt="Funeraria Mascotas Lista de Contratos"
+                                    class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Sistema funerario de mascotas en .NET</h3>
+                            <p class="project-text text-secondary">
+                                Panel de control para usuarios, clientes, contratos e inventario para una funeraria de
+                                mascotas.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge laravel">Laravel</span>
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge php">PHP</span>
+                                <span class="badge skill-badge mysql">MySQL</span>
+                                <span class="badge skill-badge dotnet">.NET</span>
+
+                                <span class="badge skill-badge wpf">WPF</span>
+                                <span class="badge skill-badge csharp">C#</span>
+                                <span class="badge skill-badge railway">Railway</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=sistema-net" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Proyecto 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar">
+                                    <span class="browser-url">ListaContratos</span>
+                                </div>
+                            </div>
+                            <div class="browser-body">
+                                <!-- Direcciona aquí tu imagen de la lista de contratos -->
+                                <img src="/assets/img/mockup-sistema-web.png"
+                                    alt="Funeraria Mascotas Lista de Contratos" class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Sistema funerario de mascotas en Vue.js</h3>
+                            <p class="project-text text-secondary">
+                                Panel de usuarios, clientes, contratos e inventario para una funeraria de mascotas.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge laravel">Laravel</span>
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge php">PHP</span>
+                                <span class="badge skill-badge vue">Vue</span>
+
+                                <span class="badge skill-badge js">JavaScript</span> </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=sistema-vue" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <h4 class="projects-section-title">Proyectos universitarios</h4>
+                <p class="projects-description text-secondary mt-2">
+                    Estos proyectos fueron realizados en equipo, donde el rol que desempeñé fue el de desarrollador
+                    front-end.
+                </p>
+                <!-- Proyecto 4: Huella verde -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <!-- Contenedor del Mockup Combinado (Escritorio + Móvil) -->
+                        <div class="browser-mockup position-relative">
+
+                            <div class="browser-body position-relative pb-4">
+                                <!-- Imagen principal de la página web (escritorio) -->
+                                <img src="/assets/img/login-portrait.png" alt="Página web funeraria escritorio"
+                                    class="project-img project-img--portrait">
+
+                                <!-- Imagen del celular flotando superpuesta -->
+                                <div class="project-phone-overlay">
+                                    <img src="/assets/img/estadísticas-left.png" alt="Vista móvil funeraria"
+                                        class="phone-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Aplicación Huella Verde</h3>
+                            <p class="project-text text-secondary">
+                                Aplicación realizada en React Native que permite conocer la huella de carbono de los
+                                usuarios por medio de un cuestionario, generar estadísticas y mostrar consejos para
+                                reducirla.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge react">React</span>
+                                <span class="badge skill-badge js">JavaScript</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=huella-verde" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <!-- Contenedor del Mockup Combinado (Escritorio + Móvil) -->
+                        <div class="browser-mockup position-relative">
+
+                            <div class="browser-body position-relative pb-4 app-mockup-container">
+                                <!-- Imagen de la izquierda (Login) -->
+                                <img src="/assets/img/login2-portrait.png" alt="Login móvil"
+                                    class="project-img app-img-left">
+
+                                <!-- Imagen central principal (Perfil / Feed) -->
+                                <img src="/assets/img/perfil-portrait.png" alt="Perfil móvil"
+                                    class="project-img app-img-main">
+
+                                <!-- Imagen de la derecha (Superpuesta / Ajustes) -->
+                                <div class="project-phone-overlay app-img-right-overlay">
+                                    <img src="/assets/img/post-left.png" alt="Vista móvil adicional" class="phone-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Aplicación Pixoly (Red social)</h3>
+                            <p class="project-text text-secondary">
+                                Permite a los usuarios crear un perfil, compartir, guardar y visualizar publicaciones e
+                                interactuar con otros usuarios en la caja de comentarios de cada publicación.
+
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge react">React</span>
+                                <span class="badge skill-badge js">JavaScript</span>
+                            </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=pixoly" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar">
+                                    <span class="browser-url">ListaClientes</span>
+                                </div>
+                            </div>
+                            <div class="browser-body">
+                                <!-- Direcciona aquí tu imagen de la lista de contratos -->
+                                <img src="/assets/img/restaurante-mockup.png" alt="Restaurante Lista de Clientes"
+                                    class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Sistema de reservación de mesas</h3>
+                            <p class="project-text text-secondary">
+                                Sistema realizado con Laaravel que permite a un usuario administrador gestionar
+                                clientes, reservaciones y mesas de un restaurante.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-5">
+                                <span class="badge skill-badge laravel">Laravel</span>
+                                <span class="badge skill-badge api">API REST</span>
+                                <span class="badge skill-badge php">PHP</span>
+                                <span class="badge skill-badge html">HTML</span>
+
+                                <span class="badge skill-badge css">CSS</span>
+
+                                <span class="badge skill-badge js">JavaScript</span> </div>
+                            <div class="d-flex justify-content-end mt-auto">
+                                <a href="/proyecto.html?p=reservas-mesas" class="btn project-btn">Ir a proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+    <script src="/js/scrolling.js"></script>
+</body>
+
+</html>
