@@ -115,9 +115,9 @@ const PROYECTOS = {
         resumen: 'Red social inspirada en Instagram para crear un perfil, compartir publicaciones e interactuar con otros usuarios.',
         tech: [['API REST', 'api'], ['React', 'react'], ['JavaScript', 'js']],
         imagenes: [
-            { src: 'assets/img/login2-portrait.png', alt: 'Pantallas de inicio de sesión', pie: 'Inicio de sesión' },
-            { src: 'assets/img/post-left.png', alt: 'Pantalla de feed de publicaciones', pie: 'Feed de publicaciones' },
-            { src: 'assets/img/perfil-portrait.png', alt: 'Pantallas opciones de usuario', pie: 'Perfil de usuario' }
+            { src: 'assets/img/Login2-portrait.png', alt: 'Pantallas de inicio de sesión', pie: 'Inicio de sesión' },
+            { src: 'assets/img/Post-left.png', alt: 'Pantalla de feed de publicaciones', pie: 'Feed de publicaciones' },
+            { src: 'assets/img/Perfil-portrait.png', alt: 'Pantallas opciones de usuario', pie: 'Perfil de usuario' }
 
         ],
         descripcion: [
