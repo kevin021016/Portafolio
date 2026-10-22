@@ -7,7 +7,7 @@ const PROYECTOS = {
         tech: [['HTML', 'html'], ['CSS', 'css'], ['JavaScript', 'js']],
         imagenes: [
             { src: 'assets/img/device-shot.png', alt: 'Sitio web en laptop y celular', pie: 'Versión de escritorio y móvil' },
-            { src: 'assets/img/mockup1-pag-web-funeraria.PNG', alt: 'Sitio web en celular', pie: 'Sección de pólizas en el celular' }
+            { src: 'assets/img/mockup1-pag-web-funeraria.png', alt: 'Sitio web en celular', pie: 'Sección de pólizas en el celular' }
         ],
         descripcion: [
             'Sitio informativo para una funeraria de mascotas, pensado para que las familias consulten servicios, catálogo, carrozas, instalaciones y pólizas desde cualquier dispositivo.',
