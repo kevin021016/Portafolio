@@ -6,8 +6,8 @@ const PROYECTOS = {
         resumen: 'Portal web responsivo con información de servicios, catálogos, carrozas, instalaciones y pólizas.',
         tech: [['HTML', 'html'], ['CSS', 'css'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '../assets/img/device-shot.png', alt: 'Sitio web en laptop y celular', pie: 'Versión de escritorio y móvil' },
-            { src: '../assets/img/mockup1-pag-web-funeraria.PNG', alt: 'Sitio web en celular', pie: 'Sección de pólizas en el celular' }
+            { src: 'assets/img/device-shot.png', alt: 'Sitio web en laptop y celular', pie: 'Versión de escritorio y móvil' },
+            { src: 'assets/img/mockup1-pag-web-funeraria.PNG', alt: 'Sitio web en celular', pie: 'Sección de pólizas en el celular' }
         ],
         descripcion: [
             'Sitio informativo para una funeraria de mascotas, pensado para que las familias consulten servicios, catálogo, carrozas, instalaciones y pólizas desde cualquier dispositivo.',
@@ -33,7 +33,7 @@ const PROYECTOS = {
         resumen: 'Panel de control para usuarios, clientes, contratos e inventario para una funeraria de mascotas.',
         tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['MySQL', 'mysql'], ['.NET', 'dotnet'], ['WPF', 'wpf'], ['C#', 'csharp'], ['Railway', 'railway']],
         imagenes: [
-            { src: '../assets/img/panel_funeraria.png', alt: 'Lista de contratos', pie: 'Lista de contratos' }
+            { src: 'assets/img/panel_funeraria.png', alt: 'Lista de contratos', pie: 'Lista de contratos' }
         ],
         descripcion: [
             'Aplicación de escritorio hecha con WPF y C# para administrar una funeraria de mascotas: usuarios, clientes, contratos, inventario y reportes.',
@@ -59,7 +59,7 @@ const PROYECTOS = {
         resumen: 'Panel de usuarios, clientes, contratos e inventario para una funeraria de mascotas.',
         tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['Vue', 'vue'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '../assets/img/mockup-sistema-web.png', alt: 'Lista de contratos en el panel web', pie: 'Lista de contratos' }
+            { src: 'assets/img/mockup-sistema-web.png', alt: 'Lista de contratos en el panel web', pie: 'Lista de contratos' }
         ],
         descripcion: [
             'Versión web del panel administrativo, hecha con Vue.js y conectada a la misma API REST en Laravel.',
@@ -85,10 +85,10 @@ const PROYECTOS = {
         resumen: 'Aplicación en React Native que permite conocer la huella de carbono de los usuarios, generar estadísticas y mostrar consejos para reducirla.',
         tech: [['API REST', 'api'], ['React', 'react'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '../assets/img/login-portrait.png', alt: 'Pantallas de inicio de sesión y estadísticas de Huella Verde', pie: 'Inicio de sesión' },
-            { src: '../assets/img/inicio-portrait.png', alt: 'Pantallas de inicio o home screen', pie: 'Pantalla de inicio' },
-            { src: '../assets/img/cuestionario-left.png', alt: 'Pantalla de cuestionario', pie: 'Pantalla de cuestionario' },
-            { src: '../assets/img/estadísticas-left.png', alt: 'Pantalla de estadísticas del usuario', pie: 'Estadísticas de usuario' }
+            { src: 'assets/img/login-portrait.png', alt: 'Pantallas de inicio de sesión y estadísticas de Huella Verde', pie: 'Inicio de sesión' },
+            { src: 'assets/img/inicio-portrait.png', alt: 'Pantallas de inicio o home screen', pie: 'Pantalla de inicio' },
+            { src: 'assets/img/cuestionario-left.png', alt: 'Pantalla de cuestionario', pie: 'Pantalla de cuestionario' },
+            { src: 'assets/img/estadísticas-left.png', alt: 'Pantalla de estadísticas del usuario', pie: 'Estadísticas de usuario' }
         ],
         descripcion: [
             'Huella Verde calcula la huella de carbono que genera cada usuario a partir de un cuestionario sobre sus hábitos cotidianos, como alimentación, consumo en casa y transporte.',
@@ -115,9 +115,9 @@ const PROYECTOS = {
         resumen: 'Red social inspirada en Instagram para crear un perfil, compartir publicaciones e interactuar con otros usuarios.',
         tech: [['API REST', 'api'], ['React', 'react'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '../assets/img/login2-portrait.png', alt: 'Pantallas de inicio de sesión', pie: 'Inicio de sesión' },
-            { src: '../assets/img/post-left.png', alt: 'Pantalla de feed de publicaciones', pie: 'Feed de publicaciones' },
-            { src: '../assets/img/perfil-portrait.png', alt: 'Pantallas opciones de usuario', pie: 'Perfil de usuario' }
+            { src: 'assets/img/login2-portrait.png', alt: 'Pantallas de inicio de sesión', pie: 'Inicio de sesión' },
+            { src: 'assets/img/post-left.png', alt: 'Pantalla de feed de publicaciones', pie: 'Feed de publicaciones' },
+            { src: 'assets/img/perfil-portrait.png', alt: 'Pantallas opciones de usuario', pie: 'Perfil de usuario' }
 
         ],
         descripcion: [
@@ -144,8 +144,8 @@ const PROYECTOS = {
         resumen: 'Sistema para restaurantes donde un administrador gestiona clientes, mesas y reservaciones.',
         tech: [['Laravel', 'laravel'], ['API REST', 'api'], ['PHP', 'php'], ['HTML', 'html'], ['CSS', 'css'], ['JavaScript', 'js']],
         imagenes: [
-            { src: '../assets/img/restaurante-mockup.png', alt: 'Panel de clientes del sistema de reservaciones', pie: 'Panel de clientes' }
-            // Agrega más pantallas: { src: '/assets/img/reservas-mesas-2.png', alt: '...', pie: '...' },
+            { src: 'assets/img/restaurante-mockup.png', alt: 'Panel de clientes del sistema de reservaciones', pie: 'Panel de clientes' }
+            // Agrega más pantallas: { src: 'assets/img/reservas-mesas-2.png', alt: '...', pie: '...' },
         ],
         descripcion: [
             'Sistema hecho con Laravel para un restaurante. Un usuario administrador puede registrar clientes, mesas y reservaciones desde un panel de control.',
